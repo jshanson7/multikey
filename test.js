@@ -36,7 +36,7 @@ describe('Multikey', () => {
 
       multi.set([key1, key2], 'value');
       assert(multi.has([key1, key2]));
-      assert(!multi.has([key2, key2]));
+      assert(!multi.has([key2, key1]));
     });
   });
   describe('#delete()', () => {
@@ -73,8 +73,6 @@ describe('Multikey', () => {
   });
   it('no args', () => {
     const multi = new Multikey();
-    const key1 = { a: 'b' };
-    const key2 = { c: 'd' };
     const value = { e: 'f' };
 
     multi.set([], value);
