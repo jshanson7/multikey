@@ -18,7 +18,7 @@ const value2 = { e: 'f' };
 
 multi.set([key3, key4], value2);
 multi.get([key3, key4]); // => "{ e: 'f' }"
-multi.get([key4]); // => "undefined"
+multi.get([key4, key3]); // => "undefined"
 multi.size; // => "2"
 
 multi.delete([key3, key4]);
